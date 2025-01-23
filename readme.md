@@ -1,6 +1,6 @@
 # Weather Application
 
-A modern weather application built with React (frontend) and FastAPI (backend) that provides current weather information and 5-day forecasts for any city or US ZIP code.
+A modern weather application built with React (frontend) and FastAPI (backend) that provides current weather information and 5-day forecasts for any city or US/Indian postal codes.
 
 ## Features
 
@@ -130,3 +130,47 @@ The application includes comprehensive error handling for:
 -  API errors
 -  Invalid ZIP code formats
 -  Missing input validation
+
+## Deployment
+
+### Frontend Deployment (Netlify)
+
+1. Fork or clone this repository
+2. Connect your GitHub repository to Netlify:
+   -  Log in to Netlify
+   -  Click "New site from Git"
+   -  Choose your repository
+   -  Set build settings:
+      -  Base directory: `frontend`
+      -  Build command: `npm run build`
+      -  Publish directory: `build`
+3. Set environment variables in Netlify:
+   -  Go to Site settings > Build & deploy > Environment
+   -  Add environment variable:
+      -  Key: `REACT_APP_API_URL`
+      -  Value: Your backend API URL
+
+### Backend Deployment
+
+The backend needs to be deployed to a service that supports Python/FastAPI applications. Some options include:
+
+-  Heroku
+-  DigitalOcean
+-  AWS Elastic Beanstalk
+-  Google Cloud Run
+
+Make sure to:
+
+1. Set up CORS to allow requests from your Netlify domain
+2. Configure environment variables on your backend host
+3. Update the frontend's `.env.production` with your backend URL
+
+## Environment Variables
+
+### Frontend
+
+-  `REACT_APP_API_URL`: Backend API URL
+
+### Backend
+
+-  `VISUAL_CROSSING_API_KEY`: Your Visual Crossing Weather API key

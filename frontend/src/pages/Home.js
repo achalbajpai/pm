@@ -80,7 +80,7 @@ function Home() {
       setError("");
       try {
          const response = await axios.get(
-            `http://localhost:8000/api/weather/${encodeURIComponent(
+            `${process.env.REACT_APP_API_URL}/api/weather/${encodeURIComponent(
                trimmedLocation
             )}`
          );
