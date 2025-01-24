@@ -131,33 +131,6 @@ The application includes comprehensive error handling for:
 -  Invalid ZIP code formats
 -  Missing input validation
 
-## Deployment
-
-### Frontend Deployment (Netlify)
-
-1. Fork or clone this repository
-2. Connect your GitHub repository to Netlify:
-   -  Log in to Netlify
-   -  Click "New site from Git"
-   -  Choose your repository
-   -  Set build settings:
-      -  Base directory: `frontend`
-      -  Build command: `npm run build`
-      -  Publish directory: `build`
-3. Set environment variables in Netlify:
-   -  Go to Site settings > Build & deploy > Environment
-   -  Add environment variable:
-      -  Key: `REACT_APP_API_URL`
-      -  Value: Your backend API URL
-
-### Backend Deployment
-
-The backend needs to be deployed to a service that supports Python/FastAPI applications. Some options include:
-
--  Heroku
--  DigitalOcean
--  AWS Elastic Beanstalk
--  Google Cloud Run
 
 Make sure to:
 
